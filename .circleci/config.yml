@@ -53,7 +53,8 @@ workflows:
 
   deploy_green_remove_blue:
     jobs:
-      - creat_and_deploy_front_end
+      - creat_and_deploy_front_end:
+          context : AWS
       - get_last_deployment_id:
           requires:
             - creat_and_deploy_front_end
